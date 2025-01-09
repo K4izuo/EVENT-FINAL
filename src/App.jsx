@@ -9,21 +9,11 @@ import AdminRegister from './admin/admin_register';
 
 const App = () => {
   return (
-    // AuthProvider MUST wrap everything
     <AuthProvider>
-      <Router>
+      <Router basename="/EVENT-FINAL">
         <Routes>
           <Route path="/" element={<LoginForm />} />
-          {/* <Route path="/login" element={<LoginForm />} /> */}
           <Route path="/register" element={<AdminRegister />} />
-          {/* <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          /> */}
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
